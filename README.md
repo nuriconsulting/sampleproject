@@ -27,9 +27,6 @@ CloudWatch / EC2 / SNS / Slack Webhook
 SLACK_WEBHOOK_URL	Slack Webhook URL (앱 설정 후 획득)
 
 🔐 IAM 권한 필요
-json
-복사
-편집
 {
   "Effect": "Allow",
   "Action": [
@@ -39,10 +36,8 @@ json
   ],
   "Resource": "*"
 }
+
 🧪 테스트 트리거 예시 (SNS 이벤트)
-json
-복사
-편집
 {
   "Records": [
     {
@@ -53,9 +48,6 @@ json
   ]
 }
 📝 주요 포맷 예시 (Slack 출력)
-markdown
-복사
-편집
 [*ALARM*] `HighCPUAlarm`
 *설명:* CPU 사용률이 80% 초과
 
