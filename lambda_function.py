@@ -32,7 +32,7 @@ def get_alarm_history(cloudwatch, alarm_name):
         history = cloudwatch.describe_alarm_history(
             AlarmName=alarm_name,
             HistoryItemType='StateUpdate',
-            MaxRecords=3,
+            MaxRecords=5, # Change this to 5
             ScanBy='TimestampDescending'
         )
         items = history.get('AlarmHistoryItems', [])

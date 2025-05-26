@@ -230,7 +230,7 @@ class TestLambdaHandler(unittest.TestCase):
         mock_cloudwatch.describe_alarm_history.assert_called_once_with(
             AlarmName=sns_message_payload['AlarmName'],
             HistoryItemType='StateUpdate',
-            MaxRecords=3,
+            MaxRecords=5, # Change this to 5
             ScanBy='TimestampDescending'
         )
         
